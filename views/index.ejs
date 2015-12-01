@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Social Login</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body ng-app="socialLogin">
+
+    <div ng-controller="navCtrl">
+      <button ui-sref="home" class="btn btn-default navbar-btn">home</button><span ng-if="!isAuthenticated()">
+        <button ui-sref="login" class="btn btn-default navbar-btn">login</button></span><span ng-if="isAuthenticated()">
+        <button ui-sref="profile" class="btn btn-default navbar-btn">profile</button>
+        <button ui-sref="users" class="btn btn-default navbar-btn">users</button>
+        <button ng-click="logout()" class="btn btn-default navbar-btn">logout</button></span>
+    </div>
+    <ui-view></ui-view>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="vendor/satellizer/satellizer.min.js"></script>
+    <script src="js/module.js"></script>
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/profile.js"></script>
+    <script src="js/controllers/nav.js"></script>
+    <script src="js/controllers/users.js"></script>
+    <script src="js/controllers/conversation.js"></script>
+  </body>
+</html>
