@@ -5,7 +5,6 @@ angular.module('socialLogin')
   if(!$auth.isAuthenticated()){
     return $state.go('home');
   }
-
   $http.get('/conversations/' + $stateParams.id)
   .then(function(res) {
     $scope.conversation = res.data;
@@ -13,4 +12,21 @@ angular.module('socialLogin')
   }, function(err) {
     console.error(err);
   });
+
+  $scope.updateConvo = function(message){
+    var upd8 = {}
+    upd8.message = message
+    upd8.id = $scope.conversation._id
+    $http.put('/conversations', upd8)
+    .then(function(res) {
+      $http.get('/conversations/' + $stateParams.id)
+      .then(function(res) {
+        $scope.conversation = res.data;
+        console.log('convo:', res);
+      }, function(err) {
+        console.error(err);
+      });
+    })
+  }
+
 });

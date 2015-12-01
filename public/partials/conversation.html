@@ -2,3 +2,5 @@
 <div ng-repeat="messages in conversation.messages">
 {{messages}}
 </div>
+<input type="text" ng-model="messageInput"placeholder="Continue conversation">
+<button ng-click="updateConvo(messageInput)">send</button>
