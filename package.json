@@ -7,6 +7,9 @@
     "start": "node app.js",
     "postinstall": "bower i"
   },
+  "engines": {
+    "node": "5.1.0"
+  },
   "repository": {
     "type": "git",
     "url": ""
