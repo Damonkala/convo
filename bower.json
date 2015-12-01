@@ -2,7 +2,7 @@
   "name": "socialLogin",
   "version": "0.0.0",
   "authors": [
-    "Cade Nichols <cade@cadenichols.com>"
+    ""
   ],
   "license": "MIT",
   "ignore": [
@@ -10,12 +10,17 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "public/vendor"
   ],
   "dependencies": {
     "angular": "~1.4.8",
     "satellizer": "~0.13.1",
     "jquery": "~2.1.4",
     "angular-ui-router": "ui-router#~0.2.15"
-  }
+  },
+  "homepage": "https://github.com/Damonkala/convo",
+  "description": "",
+  "main": "",
+  "moduleType": []
 }
