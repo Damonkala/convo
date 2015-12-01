@@ -1,7 +1,6 @@
 {
-  "name": "socialLogin",
+  "name": "convoapp",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "setup": "rm -rf public/vendor node_modules && npm i && bower i",
@@ -28,5 +27,6 @@
     "morgan": "^1.6.1",
     "querystring": "^0.2.0",
     "request": "^2.67.0"
-  }
+  },
+  "description": ""
 }

@@ -7,25 +7,19 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
   $stateProvider
     .state('home', { url: '/', templateUrl: 'partials/home.html', controller: 'homeCtrl'})
     .state('login', { url: '/login', templateUrl: 'partials/login.html', controller: 'loginCtrl'})
-    
+
     .state('profile', { url: '/profile', templateUrl: 'partials/profile.html', controller: 'profileCtrl'})
+    .state('users', { url: '/users', templateUrl: 'partials/users.html', controller: 'usersCtrl'})
+    .state('conversation', { url: '/conversation/:id', templateUrl: 'partials/conversation.html', controller: 'convoCtrl'})
 
     $authProvider.github({
-      clientId: 'a24f8ae4f7f98525f469'
+      clientId: '5e3631a8a1ee5593737d'
     });
     $authProvider.google({
-      clientId: '458863588800-tm5t0hu3l19lk5kkfbop7s61tpphcdv4.apps.googleusercontent.com'
+      clientId: '574928256749-mo33o87rihmsnh6ko6flvasjs670pe04.apps.googleusercontent.com'
     });
     $authProvider.facebook({
-      clientId: '1493282791002039'
-    });
-
+    clientId: '1673113099637819'
+  });
     $authProvider.twitter();
-
-    // $authProvider.live({
-    //   clientId: '000000004C173030',
-    //   authorizationEndpoint: 'https://login.live.com/oauth20_desktop.srf',
-    //   redirectUri: 'http://mylocalwebsite.net:3000'
-
-    // });
 });

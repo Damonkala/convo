@@ -13,6 +13,7 @@ html
 
       span(ng-if='isAuthenticated()')
         button(ui-sref='profile') profile
+        button(ui-sref='users') users
         button(ng-click='logout()') logout
 
     ui-view
@@ -26,3 +27,5 @@ html
     script(src='js/controllers/home.js')
     script(src='js/controllers/profile.js')
     script(src='js/controllers/nav.js')
+    script(src='js/controllers/users.js')
+    script(src='js/controllers/conversation.js')

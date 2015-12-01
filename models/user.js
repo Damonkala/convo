@@ -16,7 +16,8 @@ var userSchema = Schema({
   github: String,
   google: String,
   twitter: String,
-  facebook: String
+  facebook: String,
+  conversations: Array
 });
 
 

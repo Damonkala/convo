@@ -12,8 +12,15 @@ router.get('/me', ensureAuthenticated, function(req, res) {
   User.findById(req.user, function(err, user){
     res.send({
       displayName: user.displayName,
-      picture: user.picture
+      picture: user.picture,
+      conversations: user.conversations
     });
+  })
+});
+
+router.get('/list', ensureAuthenticated, function(req, res) {
+  User.find(function(err, data){
+    res.send(data);
   })
 });
 

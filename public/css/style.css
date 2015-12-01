@@ -1,3 +1,6 @@
 .avatar {
   max-width: 100px;
 }
+.thumbnail {
+  max-width: 50px;
+}

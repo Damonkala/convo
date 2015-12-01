@@ -6,3 +6,9 @@
 <div>
   <img class='avatar' ng-src="{{user.picture}}" alt="">
 </div>
+
+<div ng-repeat="conversation in user.conversations track by $index">
+  <div ui-sref="conversation({id: conversation._id})">Convo {{$index}}: {{conversation.user1Name}} and {{conversation.user2Name}} {{conversation._id}}</div>
+  <input type="text" placeholder="Continue conversation">
+  <button ng-click="updateConvo()">send</button>
+</div>
