@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "setup": "rm -rf public/vendor node_modules && npm i && bower i",
-    "start": "node app.js"
+    "start": "node app.js",
+    "setup": "rm -rf public/vendor node_modules && npm i && bower i"
   },
   "repository": {
     "type": "git",
