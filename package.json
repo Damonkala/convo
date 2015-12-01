@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "setup": "npm i && bower i",
-    "start": "node app.js"
+    "setup": "rm -rf public/vendor node_modules && npm i && bower i",
+    "start": "node app.js",
+    "postinstall": "bower i"
   },
   "repository": {
     "type": "git",
