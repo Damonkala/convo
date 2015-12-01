@@ -11,7 +11,7 @@ var app = express();
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/socialLogin');
 
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // GENERAL MIDDLEWARE
 app.use(morgan('dev'));

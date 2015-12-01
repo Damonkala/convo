@@ -19,6 +19,7 @@ angular.module('socialLogin')
     upd8.id = $scope.conversation._id
     $http.put('/conversations', upd8)
     .then(function(res) {
+      $scope.messageInput = ""
       $http.get('/conversations/' + $stateParams.id)
       .then(function(res) {
         $scope.conversation = res.data;
