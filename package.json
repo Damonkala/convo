@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "setup": "rm -rf public/vendor node_modules && npm i && bower i"
+    "setup": "rm -rf public/vendor node_modules && npm i && bower i",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
